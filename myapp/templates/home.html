@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <center>
+                    <img src="{%static 'images/todo.jpeg' %}" alt="" class="mb-2"><br>
+                </center>
+                <p>What is the purpose of todo?
+                    To-do lists can be used to improve time management because all of your tasks are laid out clearly in
+                    advance. You can more easily decide what to do after you complete a task and move on to the next
+                    item on the list</p>
+                <center>
+                    <a href="{%url 'todo-add'%}" class="btn btn-outline-primary mb-2">Continue</a>
+                </center>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+</body>
+
+</html>

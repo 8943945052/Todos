@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min1.css'%}">
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="card mb-3 mt-3" style="max-width: 75%;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{%static 'images/login.png'%}" class="rounded-start h-100 w-100" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                    <h1>Register Here!</h1>
+                    <form action="" method="post">
+                        {%csrf_token%}
+                        {{form}}
+                        <button class="btn btn-primary" type="submit">Register</button>
+                        Already User? <a href="{%url 'signin'%}">SignIn</a>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
+
+
+<!-- 
+<h1>Register Here!</h1>
+                <form action="" method="post">
+                    {%csrf_token%}
+                    {{form}}
+                    <button class="btn btn-primary" type="submit">Register</button>
+                    Already User? <a href="{%url 'signin'%}">SignIn</a>
+                </form>
+-->
+
+<!-- 
+<h1>Register Here!</h1>
+                <form action="" method="post">
+                    {%csrf_token%}
+                    {{form}}
+                    <button class="btn btn-primary" type="submit">Register</button>
+                    Already User? <a href="{%url 'signin'%}">SignIn</a>
+                </form>
+-->

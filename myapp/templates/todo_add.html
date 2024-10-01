@@ -1,0 +1,60 @@
+{%extends 'base.html'%}
+
+{%block main_block%}
+
+
+<div class="container">
+    <div class="row p-5">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <form action="" method="post">
+                <h1 class="text-center">Create Task Here!</h1>
+                {%csrf_token%}
+                <label for="">Title</label>
+                {{form.title}}
+                <button type="submit" class="btn btn-outline-success">ADD</button>
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
+
+
+{%endblock%}
+
+
+
+<!-- <div class="row mt-5">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <table class="table table-danger">
+            <tr>
+                <th>Title</th>
+                <th>Status</th>
+                <th>Created Date</th>
+                <th>Owner</th>
+                <th>Action</th>
+            </tr>
+            {%for todo in todos%}
+            <tr>
+                <td>{{todo.title}}</td>
+                <td>{%if todo.status == False %}
+                       Due
+
+                    {%else%}
+                       Compleated
+
+                    {%endif%}
+                </td>
+                <td>{{todo.created_date}}</td>
+                <td>{{todo.owner}}</td>
+                <td>
+                    <a href="{%url 'todo-edit' todo.id%}" class="btn btn-outline-warning">Edit</a>
+                    <a href="{%url 'todo-delete' todo.id%}" class="btn btn-outline-warning">Delete</a>
+                </td>
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+    <div class="col-2"></div>
+</div> -->
